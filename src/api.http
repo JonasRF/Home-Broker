@@ -1,9 +1,0 @@
-POST http://localhost:3000/assets
-Content-Type: application/json
-
-{
-  "name": "Amazon",
-  "Symbol": "A1",
-  "price": 100,
-  "image": "AMZN.png"
-}
