@@ -101,4 +101,5 @@ Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
 
 ## Arquitetura do projeto
 
-![alt text](./arquitetura_projeto.png)
+![arquitetura_projeto](https://github.com/user-attachments/assets/24af3e42-cfdf-4273-86f2-2f3e4af0d949)
+
