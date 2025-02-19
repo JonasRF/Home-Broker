@@ -16,6 +16,9 @@ Content-Type: application/json
 @assetId = {{ createAsset.response.body._id }}
 
 ###
+GET http://localhost:3000/assets
+
+###
 GET http://localhost:3000/assets/A1
 
 ###
@@ -30,8 +33,6 @@ GET http://localhost:3000/wallets
 
 ###
 GET http://localhost:3000/wallets/{{ walletId }}
-
-
 
 
 ###
