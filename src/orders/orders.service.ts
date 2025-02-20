@@ -1,17 +1,29 @@
 import { Injectable } from '@nestjs/common';
+import { InjectModel } from '@nestjs/mongoose';
+import { Model } from 'mongoose';
+import { Order, OrderStatus } from './entities/order.entity';
 import { CreateOrderDto } from './dto/create-order.dto';
 
 @Injectable()
-export class OrdersService {
+export class OrderService {
+  constructor(@InjectModel(Order.name) private orderSchema: Model<Order>) {}
+
   create(createOrderDto: CreateOrderDto) {
-    return 'This action adds a new order';
+    return this.orderSchema.create({
+      wallet: createOrderDto.walletId,
+      asset: createOrderDto.assetId,
+      shares: createOrderDto.shares,
+      partial: createOrderDto.shares,
+      type: createOrderDto.type,
+      status: OrderStatus.PENDING,
+    });
   }
 
-  findAll() {
-    return `This action returns all orders`;
+  findAll(filter: { walletId: string }) {
+    return this.orderSchema.find({ wallet: filter.walletId });
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} order`;
+  findOne(id: string) {
+    return this.orderSchema.findById(id);
   }
 }
