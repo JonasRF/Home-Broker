@@ -28,7 +28,7 @@ export class WalletsService {
         path: 'assets',
         populate: ['asset'],
       },
-    ]);
+    ]) as Promise<Wallet & { assets: (WalletAsset & { asset: any })[] }>;
   }
 
   async createWalletAsset(data: {

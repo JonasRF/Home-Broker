@@ -6,7 +6,7 @@ Content-Type: application/json
 
 {
   "name": "Amazon",
-  "symbol": "A1",
+  "symbol": "AMZN",
   "price": 100,
   "image": "AMZN.png"
 }
@@ -18,7 +18,7 @@ Content-Type: application/json
 GET http://localhost:3000/assets
 
 ###
-GET http://localhost:3000/assets/A1
+GET http://localhost:3000/assets/AMZN
 
 ###
 # @name createWallet
@@ -31,7 +31,7 @@ POST http://localhost:3000/wallets
 GET http://localhost:3000/wallets
 
 ###
-GET http://localhost:3000/wallets/{{ walletId }}
+GET http://localhost:3000/wallets/51d5955a-9923-494e-af2f-ae376402d0c4
 
 
 ###
@@ -40,7 +40,7 @@ Content-Type: application/json
 
 {
   "assetId": "{{ assetId }}",
-  "shares": 100
+  "shares": 1850
 }
 
 ###
