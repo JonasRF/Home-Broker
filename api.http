@@ -5,10 +5,10 @@ POST http://localhost:3000/assets
 Content-Type: application/json
 
 {
-  "name": "Amazon",
-  "symbol": "AMZN",
-  "price": 100,
-  "image": "AMZN.png"
+  "name": "Seles Force",
+  "symbol": "CRM",
+  "price": 200,
+  "image": "CRM.png"
 }
 
 ###
@@ -31,7 +31,7 @@ POST http://localhost:3000/wallets
 GET http://localhost:3000/wallets
 
 ###
-GET http://localhost:3000/wallets/51d5955a-9923-494e-af2f-ae376402d0c4
+GET http://localhost:3000/wallets/9f0c997f-cd6d-4be7-8760-97e6c6bbe9f0
 
 
 ###
@@ -50,9 +50,10 @@ Content-Type: application/json
 {
   "walletId": "{{ walletId }}",
   "assetId": "{{ assetId}}",
-  "sahres": 10,
-  "price": 100,
-  "type": "BUY"
+  "shares": 40,
+  "price": 300,
+  "type": "BUY",
+  "status": "PENDING"
 }
 
 ###

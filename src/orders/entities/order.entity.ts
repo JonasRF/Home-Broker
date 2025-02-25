@@ -38,6 +38,12 @@ export class Order {
   @Prop({ type: String, ref: Asset.name })
   asset: AssetDocument | string;
 
+  @Prop()
+  type: OrderType;
+
+  @Prop()
+  status: OrderStatus;
+
   createdAt!: Date;
   updatedAt!: Date;
 }

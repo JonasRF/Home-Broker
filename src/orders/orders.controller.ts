@@ -1,6 +1,7 @@
 import { Controller, Get, Post, Body, Param, Query } from '@nestjs/common';
 import { OrderService } from './orders.service';
 import { CreateOrderDto } from './dto/create-order.dto';
+import { OrderPresenter } from './order.presenter';
 
 @Controller('orders')
 export class OrdersController {
@@ -12,10 +13,11 @@ export class OrdersController {
   }
 
   @Get()
-  findAll(@Query('walletId') walletId: string) {
-    return this.orderService.findAll({
+  async findAll(@Query('walletId') walletId: string) {
+    const orders = await this.orderService.findAll({
       walletId,
     });
+    return orders.map((order) => new OrderPresenter(order).toJSON());
   }
 
   @Get(':id')
