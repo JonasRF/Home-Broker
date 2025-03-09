@@ -3,7 +3,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Asset } from 'src/assets/entities/asset.entity';
 import { CreateOrderDto } from './dto/create-order.dto';
-import { Order, OrderStatus } from './entities/order.entity';
+import { Order } from './entities/order.entity';
 
 @Injectable()
 export class OrderService {
@@ -20,7 +20,7 @@ export class OrderService {
       partial: createOrderDto.shares,
       price: createOrderDto.price,
       type: createOrderDto.type,
-      status: OrderStatus.PENDING,
+      status: createOrderDto.status,
     });
   }
 

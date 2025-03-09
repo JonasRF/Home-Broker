@@ -1,4 +1,4 @@
-import { OrderType } from '../entities/order.entity';
+import { OrderStatus, OrderType } from '../entities/order.entity';
 
 export class CreateOrderDto {
   walletId: string;
@@ -6,4 +6,5 @@ export class CreateOrderDto {
   shares: number;
   price: number;
   type: OrderType;
+  status: OrderStatus;
 }

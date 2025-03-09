@@ -50,10 +50,10 @@ Content-Type: application/json
 {
   "walletId": "{{ walletId }}",
   "assetId": "{{ assetId}}",
-  "shares": 50,
-  "price": 500,
-  "type": "BUY",
-  "status": "PENDING"
+  "shares": 30,
+  "price": 300,
+  "type": "SELL",
+  "status": "OPEN"
 }
 
 ###
