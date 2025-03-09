@@ -5,10 +5,10 @@ POST http://localhost:3000/assets
 Content-Type: application/json
 
 {
-  "name": "Seles Force",
-  "symbol": "CRM",
-  "price": 200,
-  "image": "CRM.png"
+  "name": "Google",
+  "symbol": "GOOGL",
+  "price": 2500,
+  "image": "GOOGL.png"
 }
 
 ###
@@ -31,7 +31,7 @@ POST http://localhost:3000/wallets
 GET http://localhost:3000/wallets
 
 ###
-GET http://localhost:3000/wallets/9f0c997f-cd6d-4be7-8760-97e6c6bbe9f0
+GET http://localhost:3000/wallets/d7db6f04-cb29-47bb-8fbd-d3bd937fe227
 
 
 ###
@@ -40,7 +40,7 @@ Content-Type: application/json
 
 {
   "assetId": "{{ assetId }}",
-  "shares": 1850
+  "shares": 2500
 }
 
 ###
@@ -50,8 +50,8 @@ Content-Type: application/json
 {
   "walletId": "{{ walletId }}",
   "assetId": "{{ assetId}}",
-  "shares": 40,
-  "price": 300,
+  "shares": 50,
+  "price": 500,
   "type": "BUY",
   "status": "PENDING"
 }
