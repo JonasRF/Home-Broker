@@ -3,6 +3,7 @@ import { OrdersController } from './orders.controller';
 import { Order, OrderSchema } from './entities/order.entity';
 import { MongooseModule } from '@nestjs/mongoose';
 import { OrderService } from './orders.service';
+import { OrdersGateway } from './orders.gateway';
 
 @Module({
   imports: [
@@ -14,6 +15,6 @@ import { OrderService } from './orders.service';
     ]),
   ],
   controllers: [OrdersController],
-  providers: [OrderService],
+  providers: [OrderService, OrdersGateway],
 })
 export class OrdersModule {}

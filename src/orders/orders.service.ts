@@ -28,7 +28,6 @@ export class OrderService {
     return this.orderSchema
       .find({ wallet: filter.walletId })
       .populate('asset') as Promise<(Order & { asset: Asset })[]>;
-
     // return this.walletSchema.findById(filter.walletId).populate([
     //   {
     //     path: 'assets', //walletasset
