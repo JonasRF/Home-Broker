@@ -5,10 +5,10 @@ POST http://localhost:3000/assets
 Content-Type: application/json
 
 {
-  "name": "MELI",
-  "symbol": "MELI",
-  "price": 260,
-  "image": "MELI.png"
+  "name": "CRM",
+  "symbol": "CRM",
+  "price": 270,
+  "image": "CRM.png"
 }
 
 ###
